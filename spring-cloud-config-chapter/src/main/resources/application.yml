@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: ChapterBackend
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/parserdigital/apps-configuration.git
+          force-pull: true
+          username: ${SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME}
+          password: ${SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD}
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
