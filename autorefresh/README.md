@@ -1,1 +1,1 @@
-# Simple Git Cloud Config Client
+# Simple Spring Cloud Config Client
